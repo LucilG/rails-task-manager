@@ -15,9 +15,12 @@ Rails.application.routes.draw do
   get '/tasks/new', to: 'tasks#new'
   post '/tasks', to: 'tasks#create'
 
-  # EDIT : modifier la tâche sélectionnée
+  # EDIT : modifier une tâche
   get '/tasks/:id/edit', to: 'tasks#edit', as: :task_edit
   patch '/tasks/:id', to: 'tasks#update'
+
+  # DELETE : supprimer une tâche
+  delete "tasks/:id", to: "tasks#destroy"
 
   # SHOW : afficher les détails de la task
   get '/tasks/:id', to: 'tasks#show', as: :task
