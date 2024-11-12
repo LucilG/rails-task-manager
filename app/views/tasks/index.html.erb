@@ -5,12 +5,12 @@
     <% @tasks.each do |task| %>
     <div class="task-details">
       <input type="checkbox" name="task" />
-      <label for="task"><%= task.title %></label>
+      <label for="task"><%= link_to task.title, task_path(task) %></label>
     </div>
     <% end %>
   </div>
 </div>
 
-<footer>
+<div class="footer">
   <%= link_to 'Go back to home page', root_path %>
-</footer>
+</div>

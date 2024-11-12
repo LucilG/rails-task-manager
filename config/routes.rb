@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "tasks#home"
 
+   # INDEX : lister toutes les tasks
    get '/tasks', to: 'tasks#index'
+
+   # SHOW : afficher les détails de la task
+   get '/tasks/:id', to: 'tasks#show', as: :task
 end
