@@ -54,3 +54,22 @@ li {
   flex-direction: column;
   align-items: flex-start;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.element-form {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 10px;
+  width: auto;
+}
+
+.input-form {
+  width: 100%;
+}

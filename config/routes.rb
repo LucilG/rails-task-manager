@@ -11,6 +11,10 @@ Rails.application.routes.draw do
    # INDEX : lister toutes les tasks
    get '/tasks', to: 'tasks#index'
 
-   # SHOW : afficher les détails de la task
-   get '/tasks/:id', to: 'tasks#show', as: :task
+   # CREATE : créer et ajouter une nouvelle tâche à la liste
+   get '/tasks/new', to: 'tasks#new'
+   post '/tasks', to: 'tasks#create'
+
+      # SHOW : afficher les détails de la task
+      get '/tasks/:id', to: 'tasks#show', as: :task
 end
