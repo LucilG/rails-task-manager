@@ -1,19 +1,7 @@
 <div class="container">
   <h1>Create a new task</h1>
-
-  <%= form_with model: @task do |f| %>
-  <div class="element-form">
-    <%= f.label :title %>
-    <%= f.text_field :title, class:"input-form" %>
-  </div>
-  <div class="element-form">
-    <%= f.label :details %>
-    <%= f.text_field :details, class:"input-form" %>
-  </div>
-  <div class="element-form">
-    <%= f.submit %>
-  </div>
-  <% end %>
+  <%= render "form", task: @task %>
+</div>
 
 <div class="footer">
   <%= link_to 'Go back to home page', root_path %>
