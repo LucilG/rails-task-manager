@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Tasks list</h1>
+
+  <div class="task-list">
+    <% @tasks.each do |task| %>
+    <div class="task-details">
+      <input type="checkbox" name="task" />
+      <label for="task"><%= task.title %></label>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<footer>
+  <%= link_to 'Go back to home page', root_path %>
+</footer>
