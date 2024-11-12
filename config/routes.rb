@@ -8,13 +8,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "tasks#home"
 
-   # INDEX : lister toutes les tasks
-   get '/tasks', to: 'tasks#index'
+  # INDEX : lister toutes les tasks
+  get '/tasks', to: 'tasks#index'
 
-   # CREATE : créer et ajouter une nouvelle tâche à la liste
-   get '/tasks/new', to: 'tasks#new'
-   post '/tasks', to: 'tasks#create'
+  # CREATE : créer et ajouter une nouvelle tâche à la liste
+  get '/tasks/new', to: 'tasks#new'
+  post '/tasks', to: 'tasks#create'
 
-      # SHOW : afficher les détails de la task
-      get '/tasks/:id', to: 'tasks#show', as: :task
+  # EDIT : modifier la tâche sélectionnée
+  get '/tasks/:id/edit', to: 'tasks#edit', as: :task_edit
+  patch '/tasks/:id', to: 'tasks#update'
+
+  # SHOW : afficher les détails de la task
+  get '/tasks/:id', to: 'tasks#show', as: :task
 end

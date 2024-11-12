@@ -1,14 +1,13 @@
 <div class="container">
-  <h1>Task: <%= @task.title%></h1>
+  <div class="banner">
+    <h1>Task: <%= @task.title%></h1>
+    <%= link_to 'Edit this task', task_edit_path(@task) %>
+  </div>
 
   <div class="task-details">
     <p class="details"><strong>Details:</strong> <%= @task.details%></p>
     <input type="checkbox" name="task" />
-    <% if @task.completed %>
-      <label for="task">this task is completed !</label>
-    <% else %>
-      <label for="task">this task is not completed yet !</label>
-    <% end %>
+    <label for="task"><%= @input_label %></label>
   </div>
 </div>
 
